@@ -20,13 +20,4 @@ public class StudentService {
     }
 }
 
-/**
- * LocalDate dob = LocalDate.of(1999, Month.SEPTEMBER, 27);
- *         LocalDate now = LocalDate.now();
- *         int age = now.getYear() - dob.getYear();
- * new Student(1L,
- *                         "john",
- *                         "john@test.com",
- *                         dob,
- *                         age)
- */
+
