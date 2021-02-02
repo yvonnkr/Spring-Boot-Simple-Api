@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service // Same as @Component only that the @Service is for semantics
 public class StudentService {
@@ -17,6 +18,18 @@ public class StudentService {
     public List<Student> getStudents() {
 
         return studentRepository.findAll();
+    }
+
+    public void addNewStudent(Student student) {
+        Optional<Student> studentOptional = studentRepository.findStudentByEmail(student.getEmail());
+
+        if(studentOptional.isPresent()){
+            throw new IllegalStateException("Email taken");
+        }
+
+        // can do more validations before save
+
+        studentRepository.save(student);
     }
 }
 
