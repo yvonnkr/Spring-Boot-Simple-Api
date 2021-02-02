@@ -19,16 +19,16 @@ public class StudentConfig {
             Student john = new Student(
                     "john",
                     "john@test.com",
-                    LocalDate.of(1999, SEPTEMBER, 27),
-                    22
+                    LocalDate.of(1999, SEPTEMBER, 27)
+
 
             );
 
             Student mary = new Student(
                     "mary",
                     "mary@test.com",
-                    LocalDate.of(1979, OCTOBER, 27),
-                    42
+                    LocalDate.of(1979, OCTOBER, 27)
+
 
             );
 
